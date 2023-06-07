@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Title goes here{% endblock %}</title>
+</head>
+<body>
+    {% if get_flashed_messages() %}
+       {% for msg in get_flashed_messages() %} 
+           <p>{{ msg }}</p>
+       {% endfor %} 
+    {% endif %}
+    {% block content %}Content goes here{% endblock %}
+</body>
+</html>
